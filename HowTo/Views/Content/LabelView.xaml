@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HowTo.Views.Content.LabelView"
+    HeightRequest="33"
+    Padding="5"
+    FlexLayout.Basis="{Binding Size, Converter={StaticResource strToFlex}}">
+
+    <ContentView.Content>
+        <StackLayout Orientation="Vertical"
+                     BackgroundColor="Green">
+            <Label Text="{Binding Text}" FontSize="Title"/>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

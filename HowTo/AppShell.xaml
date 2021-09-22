@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:HowTo.Views"
+       Title="HowTo"
+       x:Class="HowTo.AppShell"
+       FlyoutBehavior="Locked">
+
+    <Shell.FlyoutHeader>
+        <ContentView HeightRequest="85">
+            <Image BackgroundColor="Red" Source="xamarin_logo.png"/>
+        </ContentView>
+    </Shell.FlyoutHeader>
+
+    <MenuItem Text="T0!" StyleClass="MenuItemLayoutStyle"/>
+    <FlyoutItem  Route="Main" FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="1!">
+            <ShellContent Title="Colour Me!" ContentTemplate="{DataTemplate local:OurPage}"/>
+            <ShellContent Title="Colour Me 2!" ContentTemplate="{DataTemplate local:OurPage}"/>
+            <ShellContent Title="Colour Me 3!" ContentTemplate="{DataTemplate local:OurPage}"/>
+        </Tab>
+        <Tab Title="2!">
+            <ShellContent Title="Colour Me!" ContentTemplate="{DataTemplate local:OurPage}"/>
+            <ShellContent Title="Colour Me 2!" ContentTemplate="{DataTemplate local:OurPage}"/>
+            <ShellContent Title="Colour Me 3!" ContentTemplate="{DataTemplate local:OurPage}"/>
+        </Tab>
+    </FlyoutItem>
+
+     <MenuItem Text="T1!" StyleClass="MenuItemLayoutStyle"/>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="3!">
+            <ShellContent Title="Colour Me!" ContentTemplate="{DataTemplate local:OurPage}"/>
+            <ShellContent Title="Colour Me 2!" ContentTemplate="{DataTemplate local:OurPage}"/>
+            <ShellContent Title="Colour Me 3!" ContentTemplate="{DataTemplate local:OurPage}"/>
+        </Tab>
+        <Tab Title="4!">
+            <ShellContent Title="Colour Me!" ContentTemplate="{DataTemplate local:OurPage}"/>
+            <ShellContent Title="Colour Me 2!" ContentTemplate="{DataTemplate local:OurPage}"/>
+            <ShellContent Title="Colour Me 3!" ContentTemplate="{DataTemplate local:OurPage}"/>
+        </Tab>
+    </FlyoutItem>
+
+    
+    <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked"/>
+
+    <TabBar Route="LoginPage" Title="TabBar">
+        <ShellContent Icon="icon_about.png" Title="Login" ContentTemplate="{DataTemplate local:LoginPage}"/>
+        <ShellContent Icon="icon_feed.png" Title="Other Login" ContentTemplate="{DataTemplate local:LoginPage}"/>
+    </TabBar>
+
+</Shell>

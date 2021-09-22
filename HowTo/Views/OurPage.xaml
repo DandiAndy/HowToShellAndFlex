@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HowTo.Views.OurPage"
+             xmlns:vm="clr-namespace:HowTo.ViewModels"
+             Title="{Binding Title}"
+             Shell.TabBarIsVisible="False">
+    
+    <ContentPage.BindingContext>
+        <vm:OurViewModel />
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <FlexLayout x:Name="OurFlexLayout"
+                Padding="30,24,30,24"
+                Direction="Row"
+                Wrap="Wrap"
+                AlignContent="Start"
+                AlignItems="Start"
+                JustifyContent="Start"
+                BindableLayout.ItemsSource="{Binding Items}"
+                BindableLayout.ItemTemplateSelector="{StaticResource itemSelector}">
+        </FlexLayout>
+    </ScrollView>
+    
+ 
+
+</ContentPage>
